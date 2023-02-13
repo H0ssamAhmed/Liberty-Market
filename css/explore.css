@@ -1,0 +1,502 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+:root {
+    --main-color: #7453fc;
+    --main-color-alt: white;
+    --main-transition: 0.3s;
+    --section-padding: 60px;
+    --section-background: #ececec;
+    --second-background: #fafafa;
+    --p-color: #777;
+    --bg-color: #282b2f;
+    --border: #404245;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    background-image: url(../imgs/dark-bg.jpg);
+    background-repeat: repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* header  */
+.header {
+    color: black;
+    padding: 3px 0;
+    background-color: var(--main-color-alt);
+    max-width: 1160px;
+    max-width: 100%;
+    /*   margin: 20px auto;*/
+    margin: 0;
+}
+
+.header .container {
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.header .container .toggle {
+    cursor: pointer;
+    font-size: 35px;
+    right: 5%;
+    position: absolute;
+    align-items: center;
+}
+
+.header .container .links {
+    transition: var(--main-transition);
+    align-items: center;
+    display: flex;
+}
+
+.header .container ul {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5px;
+    align-items: center;
+    text-transform: capitalize;
+    transition: var(--main-transition);
+}
+
+.header .container ul li {
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 43px;
+    transition: var(--main-transition);
+}
+
+.header .container ul li:nth-child(2) {
+    background-color: var(--main-color);
+}
+
+.header .container ul li:nth-child(2) a {
+    color: var(--main-color-alt);
+
+}
+
+.header .container ul li:hover {
+    background-color: var(--main-color);
+}
+
+.header .container ul li:hover a {
+    color: var(--main-color-alt);
+}
+
+.header .container ul li a {
+    color: black;
+}
+
+.xmark {
+    cursor: pointer;
+    font-size: 35px;
+    right: 5%;
+    position: absolute;
+    align-items: center;
+    display: none;
+}
+
+/* landing */
+.landing {
+    height: 100vh;
+    text-transform: capitalize;
+    color: white;
+    text-align: center;
+}
+
+.landing::before {
+    background-image: url(../imgs/explore-bg.jpg);
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: calc(100vh - 50px);
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.landing .text {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.landing .text h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.landing .text h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 66px;
+    text-transform: uppercase;
+}
+
+/* feature */
+.featur {
+    padding: var(--section-padding) 0px;
+}
+
+.featur .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.featur .img {
+    position: relative;
+    max-width: 500px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.featur .img img {
+    max-width: 100%;
+    color: var(--main-color-alt);
+    border-radius: 25px;
+}
+
+.featur .img .text {
+    position: absolute;
+    left: 50%;
+    bottom: -30%;
+    transform: translate(-50%, 10%);
+    width: 90%;
+    color: var(--main-color-alt);
+    text-transform: capitalize;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background: hsla(214, 8%, 17%, 0.8);
+    border-radius: 10px;
+    padding: 10px 0;
+    transition: calc(var(--main-transition));
+}
+
+.featur .container .img:hover .text {
+    bottom: 10%;
+}
+
+.featur .img .text h2 {
+    width: 100%;
+    padding: 15px;
+}
+
+.featur .img .text img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.featur .img .text div h4 {
+    padding: 15px 0;
+}
+
+.featur .img .text div a {
+    color: var(--main-color);
+}
+
+/* search */
+.search {
+    padding: var(--section-padding) 0px;
+}
+
+.search .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.search .container .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    color: var(--main-color-alt);
+}
+
+.search .container .head h1 {
+    position: relative;
+    font-size: 2.2em;
+}
+
+.search .container .head h1::before {
+    position: absolute;
+    content: "";
+    left: 0%;
+    top: -80%;
+    width: 30%;
+    height: 3px;
+    background-color: var(--main-color);
+}
+
+.search .container .head h1 span {
+    color: var(--main-color);
+}
+
+.search .container .head ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.search .container .head ul li input,
+.search .container .head ul li select,
+.search .container .head ul li button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: transparent;
+    outline: none;
+    color: var(--second-background);
+    border: var(--border) 1px solid;
+    text-transform: capitalize;
+}
+
+.search .container .head ul li select,
+.search .container .head ul li button {
+    cursor: pointer;
+}
+
+.search .container .head ul li button {
+    background-color: var(--main-color);
+    color: var(--main-color-alt);
+    transition: var(--main-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.search .container .head ul li button::before {
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--second-background);
+}
+
+.search .container .head ul li button:hover {
+    background-color: var(--main-color-alt);
+    color: var(--main-color);
+}
+
+.search .container .head ul li input::placeholder {
+    color: var(--second-background);
+}
+
+.search .container .head ul li select option {
+    color: var(--main-color-alt);
+    outline: none;
+    background-color: var(--bg-color);
+    border: 1px solid var(--main-color-alt);
+    margin: 10px;
+    width: 50px;
+}
+
+.search .container .boxes {
+    padding: var(--section-padding) 0px;
+    color: var(--main-color-alt);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 70px 20px;
+}
+
+.search .container .boxes .card {
+    text-transform: capitalize;
+    position: relative;
+    border: 1px solid var(--border);
+    padding: 40px 20px;
+    background-color: var(--bg-color);
+    border-radius: 40px;
+    padding-bottom: 0px;
+}
+
+.search .container .boxes .card img[class="auther"] {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    border-radius: 50%;
+    top: 0px;
+}
+
+
+.search .container .boxes .card img:nth-child(2) {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 40px;
+}
+
+.search .container .boxes .card h2 {
+    text-align: center;
+    margin: 30px 0px;
+    font-size: 30px;
+}
+
+.search .container .boxes .card div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    margin: 40px 10px;
+}
+
+.search .container .boxes .card div h4 span {
+    font-size: 28px;
+    margin: 10px 0;
+    display: block;
+}
+
+.search .container .boxes .card a {
+    width: 70%;
+    text-transform: capitalize;
+    position: absolute;
+    padding: 15px 20px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: var(--main-transition);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -30px;
+    cursor: pointer;
+    transition: var(--main-transition);
+    text-align: center;
+}
+
+.search .container .boxes .card a::after {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 2px;
+    background: var(--main-color-alt);
+    left: 10%;
+    bottom: 2px;
+}
+
+.search .container .boxes .card a:hover {
+    background-color: var(--main-color-alt);
+    color: var(--main-color);
+}
+
+/* seller  */
+.sellers {
+    padding: var(--section-padding) 0px;
+    background-image: url(../imgs/main-bg.jpg);
+    text-transform: capitalize;
+    color: var(--main-color-alt);
+}
+
+
+.sellers .container h1 {
+    font-size: 40px;
+    text-align: center;
+    margin: 40px 0 100px;
+    position: relative;
+}
+
+.sellers .container h1::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: -100%;
+    width: 25%;
+    height: 3px;
+    background-color: var(--main-color-alt);
+    transform: translateX(-50%);
+}
+
+.sellers .container ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    text-align: start;
+    gap: 40px;
+}
+
+.sellers .container ul li {
+    position: relative;
+    counter-increment: num;
+    display: flex;
+    gap: 20px;
+}
+
+.sellers .container ul li::before {
+    content: counter(num)" -";
+    position: absolute;
+    font-size: 25px;
+    left: -13%;
+    font-weight: bolder;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sellers .container ul li img {
+    max-width: 100%;
+    border-radius: 50%;
+    width: 75px;
+}
+
+.sellers .container ul li div {
+    padding: 10px 20px;
+}
+
+.sellers .container ul li div h2 {
+    padding-bottom: 10px;
+    width: fit-content;
+}
+
+/* footer */
+.footer {
+    color: var(--main-color-alt);
+    text-align: center;
+    padding: var(--section-padding) 20px;
+    text-transform: capitalize;
+    background-image: linear-gradient(90deg, #7d5afe, #9d54f4);
+}
+
+.footer a {
+    color: var(--main-color-alt);
+    font-weight: bold;
+}
+
+.footer span {
+    font-weight: bolder;
+}

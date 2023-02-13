@@ -1,0 +1,571 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+:root {
+    --main-color: #7453fc;
+    --main-color-alt: white;
+    --main-transition: 0.3s;
+    --section-padding: 60px;
+    --section-background: #ececec;
+    --second-background: #fafafa;
+    --p-color: #777;
+    --bg-color: #282b2f;
+    --border: #404245;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    background-image: url(../imgs/dark-bg.jpg);
+    background-repeat: repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* header  */
+.header {
+    color: black;
+    padding: 3px 0;
+    background-color: var(--main-color-alt);
+    max-width: 1160px;
+    max-width: 100%;
+    /*   margin: 20px auto;*/
+    margin: 0;
+}
+
+.header .container {
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.header .container .toggle {
+    cursor: pointer;
+    font-size: 35px;
+    right: 5%;
+    position: absolute;
+    align-items: center;
+}
+
+.header .container .links {
+    transition: var(--main-transition);
+    align-items: center;
+    display: flex;
+}
+
+.header .container ul {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5px;
+    align-items: center;
+    text-transform: capitalize;
+    transition: var(--main-transition);
+}
+
+.header .container ul li {
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 43px;
+    transition: var(--main-transition);
+}
+
+.header .container ul li:nth-child(3) {
+    background-color: var(--main-color);
+}
+
+.header .container ul li:nth-child(3) a {
+    color: var(--main-color-alt);
+
+}
+
+.header .container ul li:hover {
+    background-color: var(--main-color);
+}
+
+.header .container ul li:hover a {
+    color: var(--main-color-alt);
+}
+
+.header .container ul li a {
+    color: black;
+}
+
+.xmark {
+    cursor: pointer;
+    font-size: 35px;
+    right: 5%;
+    position: absolute;
+    align-items: center;
+    display: none;
+}
+
+/* landing */
+.landing {
+    height: 100vh;
+    text-transform: capitalize;
+    color: white;
+    text-align: center;
+}
+
+.landing::before {
+    background-image: url(../imgs/explore-bg.jpg);
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: calc(100vh - 50px);
+    left: 0;
+    top: 6.8%;
+    z-index: -1;
+}
+
+.landing .text {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.landing .text h4 {
+    font-size: 30px;
+    margin-bottom: -60px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding-top: 60px;
+}
+
+.landing .text h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 66px;
+    text-transform: uppercase;
+}
+
+.landing div {
+    display: flex;
+    gap: 70px;
+}
+
+.landing div a {
+    position: relative;
+    padding: 15px 50px;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 100px;
+    font-weight: 600;
+    transition: var(--main-transition);
+}
+
+.landing div a::after {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 2px;
+    background: var(--main-color-alt);
+    left: 10%;
+    bottom: 2px;
+}
+
+.landing div a:nth-child(1) {
+    background-color: var(--main-color);
+}
+
+.landing div a:nth-child(2) {
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+
+}
+
+.landing div a:nth-child(1):hover {
+    background-color: var(--main-color-alt);
+    color: var(--main-color);
+}
+
+.landing div a:nth-child(2):hover {
+    background-color: var(--main-color);
+}
+
+/* items */
+.items {
+    color: white;
+    padding: var(--section-padding) 0px;
+}
+
+.items h1 {
+    position: relative;
+    width: fit-content;
+    margin: 10px auto 40px;
+    font-size: 40px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.items h1::before {
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: var(--main-color);
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.items h1 span {
+    color: var(--main-color);
+}
+
+.items .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+}
+
+.items .container .img img {
+    width: 600px;
+    border-radius: 20px;
+}
+
+.items .container .info {
+    /* text-align: center; */
+    align-items: flex-start;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+}
+
+.items .container .info h2 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.items .container .info .auther {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    align-items: center;
+    padding-bottom: 25px;
+
+}
+
+.items .container .info .auther img {
+    border-radius: 50%;
+}
+
+.items .container .info .auther h3 {
+    text-align: start;
+}
+
+.items .container .info .auther h3 a {
+    color: var(--main-color);
+    padding: 10px;
+    text-transform: lowercase;
+    display: block;
+}
+
+.items .container .info .text {
+    line-height: 2;
+    padding: 20px 0px;
+    text-transform: capitalize;
+
+}
+
+.items .container .info .bid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.items .container .info .bid p {
+    line-height: 2;
+}
+
+.items .container .info .bid p span[class="color"] {
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.items .container .info .bid p span[class="mark"] {
+    font-style: normal;
+    color: #afafaf;
+}
+
+.items .container .info form {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+
+.items .container .info form input:nth-child(2)::placeholder {
+    color: var(--main-color-alt);
+}
+
+.items .container .info form input:nth-child(2) {
+    width: 100px;
+    height: 46px;
+    border: 1px solid var(--main-color);
+    outline: none;
+    border-radius: 23px;
+    background-color: transparent;
+    color: var(--main-color-alt);
+    text-align: center;
+    margin: 0px 15px;
+}
+
+.items .container .info form span input {
+    font-size: 14px;
+    color: var(--main-color-alt);
+    background-color: var(--main-color);
+    border: none;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 25px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: var(--main-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.items .container .info form span {
+    position: relative;
+}
+
+.items .container .info form span input:hover {
+    background-color: var(--main-color-alt);
+    color: var(--main-color);
+}
+
+.items .container .info form span::after {
+    position: absolute;
+    content: "";
+    width: 50%;
+    left: 25%;
+    bottom: 0px;
+    height: 2px;
+    background-color: var(--main-color-alt);
+}
+
+/* item */
+.item {
+    color: white;
+    padding: var(--section-padding) 0px;
+}
+
+.item h1 {
+    position: relative;
+    width: fit-content;
+    margin: 10px auto 40px;
+    font-size: 40px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.item h1::before {
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: var(--main-color);
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.item h1 span {
+    color: var(--main-color);
+}
+
+.item .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 40px;
+    align-items: center;
+}
+
+.item .container .card {
+    display: flex;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border);
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+.item .container .card img {
+    max-width: 100%;
+    width: 400px;
+}
+
+.item .container .card .auther {
+    line-height: 2.5;
+    padding: 0 40px;
+}
+
+.item .container .card .auther h2 {
+    text-transform: capitalize;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.item .container .card .auther h2 a {
+    text-transform: lowercase;
+    font-size: 20px;
+    color: var(--main-color);
+}
+
+.item .container .card .auther h4 {
+    font-size: 25px;
+    padding-top: 20px;
+}
+
+.item .container .card .auther h4 span {
+    font-size: 18px;
+    color: var(--main-color);
+}
+
+.item .container .card .auther h4 span b {
+    font-size: 25px;
+}
+
+/* creation */
+.create {
+    position: relative;
+    padding: var(--section-padding) 0px;
+    background-color: #9653f1;
+}
+
+.create .container {
+    color: white;
+    text-transform: capitalize;
+}
+
+.create .container .cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--section-padding) 0px;
+}
+
+.create .container .cart p {
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+}
+
+.create .container .cart p::before {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 2px;
+    background-color: var(--main-color-alt);
+    top: -100%;
+    left: 0;
+}
+
+.create .container .cart a {
+    position: relative;
+    padding: 15px 30px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: var(--main-transition);
+}
+
+.create .container .cart a::after {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 2px;
+    background: var(--main-color-alt);
+    left: 10%;
+    bottom: 2px;
+}
+
+.create .container .cart a:hover {
+    background-color: var(--main-color-alt);
+    color: var(--main-color);
+}
+
+.create .container .way {
+    display: flex;
+}
+
+.create .container .way .box div {
+    background-color: var(--main-color-alt);
+    padding: 20px;
+    width: fit-content;
+    border-radius: 50%;
+}
+
+.create .container .way .box h3 {
+    font-size: 24px;
+    margin: 20px 0px;
+}
+
+.create .container .way .box p {
+    line-height: 2;
+    margin-right: 30px;
+}
+
+.create .container .way .box p a {
+    color: #3CF;
+}
+
+/* footer */
+.footer {
+    color: var(--main-color-alt);
+    text-align: center;
+    padding: var(--section-padding) 20px;
+    text-transform: capitalize;
+    background-image: linear-gradient(90deg, #7d5afe, #9d54f4);
+}
+
+.footer a {
+    color: var(--main-color-alt);
+    font-weight: bold;
+}
+
+.footer span {
+    font-weight: bolder;
+}

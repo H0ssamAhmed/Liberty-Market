@@ -1,0 +1,663 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+:root {
+    --main-color: #7453fc;
+    --main-color-alt: white;
+    --main-transition: 0.3s;
+    --section-padding: 60px;
+    --section-background: #ececec;
+    --second-background: #fafafa;
+    --p-color: #777;
+    --bg-color: #282b2f;
+    --border: #404245;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    background-image: url(../imgs/dark-bg.jpg);
+    background-repeat: repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* header  */
+.header {
+    color: black;
+    padding: 3px 0;
+    background-color: var(--main-color-alt);
+    max-width: 1160px;
+    max-width: 100%;
+    /*   margin: 20px auto;*/
+    margin: 0;
+}
+
+.header .container {
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.header .container .toggle {
+    cursor: pointer;
+    font-size: 35px;
+    right: 5%;
+    position: absolute;
+    align-items: center;
+}
+
+.header .container .links {
+    transition: var(--main-transition);
+    align-items: center;
+    display: flex;
+}
+
+.header .container ul {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5px;
+    align-items: center;
+    text-transform: capitalize;
+    transition: var(--main-transition);
+}
+
+.header .container ul li {
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 43px;
+    transition: calc(var(--main-transition) + 0.5s);
+}
+
+.header .container ul li:nth-child(1) {
+    background-color: var(--main-color);
+}
+
+.header .container ul li:nth-child(1) a {
+    color: var(--main-color-alt);
+
+}
+
+.header .container ul li:hover {
+    background-color: var(--main-color);
+}
+
+.header .container ul li:hover a {
+    color: var(--main-color-alt);
+}
+
+.header .container ul li a {
+    color: black;
+    transition: calc(var(--main-transition) + 0.5s);
+}
+
+.xmark {
+    cursor: pointer;
+    font-size: 35px;
+    right: 5%;
+    position: absolute;
+    align-items: center;
+    display: none;
+}
+
+/* landing */
+.landing {
+    height: calc(100vh - 100px);
+    color: var(--main-color-alt);
+}
+
+.landing span {
+    z-index: -1;
+    width: 100%;
+    background-image: url(../imgs/banner-bg.jpg);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+
+.landing .container {
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.landing .container .text h4 {
+    font-size: 25px;
+    margin: 20px 0px;
+}
+
+.landing .container .text h2 {
+    font-size: 40px;
+    line-height: 1.9;
+    text-transform: uppercase;
+    margin: 20px 0px;
+}
+
+.landing .container .text p {
+    text-transform: capitalize;
+    line-height: 1.8;
+    margin: 20px 0px;
+}
+
+.landing .container .text div {
+    display: flex;
+    justify-content: space-around;
+    text-transform: capitalize;
+}
+
+.landing .container .text div a {
+    width: fit-content;
+    margin: auto 5px;
+    padding: 10px 30px;
+    border-radius: 40px;
+    position: relative;
+    transition: var(--main-transition);
+    font-size: 25px;
+}
+
+.landing .container .text div a::after {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 2px;
+    background: var(--main-color-alt);
+    left: 25%;
+    bottom: 1px;
+}
+
+.landing .container .text div a:nth-child(1) {
+    background-color: var(--main-color);
+    color: var(--main-color-alt);
+}
+
+.landing .container .text div a:nth-child(1):hover {
+    background-color: var(--main-color-alt);
+    color: var(--main-color);
+}
+
+.landing .container .text div a:nth-child(2) {
+    color: var(--main-color-alt);
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+}
+
+.landing .container .text div a:nth-child(2):hover {
+    background-color: var(--main-color);
+    color: var(--main-color-alt);
+}
+
+.landing .container .img {
+    width: 50%;
+}
+
+.landing .container .img img {
+    width: 400px;
+}
+
+/* categories */
+.categories {
+    padding: var(--section-padding) 0;
+    background-image: url(../imgs/dark-bg.jpg);
+    color: var(--main-color-alt);
+}
+
+.categories h1 {
+    position: relative;
+    width: fit-content;
+    margin: 10px auto;
+    font-size: 40px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+
+.categories h1 ::before {
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: var(--main-color);
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.categories h1 span {
+    color: var(--main-color);
+}
+
+.categories .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: var(--section-padding);
+    gap: 40px;
+    justify-content: center;
+}
+
+.categories .container .card {
+    position: relative;
+    text-align: center;
+    background-color: var(--bg-color);
+    padding: 30px 30px 30px 30px;
+    border: solid 1px #404245;
+    border-radius: 10px;
+    transition: var(--main-transition);
+}
+
+.categories .container .card img {
+    background-color: var(--main-color-alt);
+    padding: 15px;
+    border-radius: 50%;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.categories .container .card h3 {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.categories .container .card a {
+    width: 100px;
+    background: red;
+    height: 100px;
+    transition: var(--main-transition);
+}
+
+.categories .container .card a i {
+    display: none;
+    position: absolute;
+    font-size: 20px;
+    left: 50%;
+    bottom: -13%;
+    transform: translate(-50%, 0%);
+    width: 50px;
+    color: var(--main-color);
+    background-color: var(--main-color-alt);
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: var(--main-transition);
+}
+
+.categories .container .card:hover i {
+    display: flex;
+}
+
+.categories .container .card i:hover {
+    transform: translate(-50%, 0%) rotateZ(-90deg);
+    color: var(--main-color-alt);
+    background-color: var(--main-color);
+}
+
+/* market */
+.market {
+    padding: 120px 0;
+    background-image: url(../imgs/dark-bg.jpg);
+    color: var(--main-color-alt);
+}
+
+.market h1 {
+    position: relative;
+    width: fit-content;
+    margin: 10px auto;
+    font-size: 40px;
+    text-transform: capitalize;
+    text-align: center;
+    padding-bottom: var(--section-padding);
+}
+
+.market h1 ::before {
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: var(--main-color);
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.market h1 span {
+    color: var(--main-color);
+}
+
+.market .container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.market .container .card {
+    text-transform: capitalize;
+    background-color: var(--bg-color);
+    padding-bottom: 30px;
+    position: relative;
+    border-radius: 20px;
+    width: 400px;
+    border: var(--border) 1px solid;
+}
+
+.market .container .card img {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.market .container .card h2 {
+    padding: 30px 0px 20px 20px;
+    font-size: 20px;
+}
+
+.market .container .card .statics {
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.market .container .card .statics .coll {
+    padding-left: 10px;
+}
+
+.market .container .card .statics .coll p {
+    margin-bottom: 5px;
+}
+
+.market .container .card .statics .coll h4 {
+    font-size: 20px;
+}
+
+.market .container .card .statics .cat {
+    padding-right: 10px;
+    text-align: start;
+}
+
+.market .container .card .statics .cat p {
+    margin-bottom: 5px;
+}
+
+.market .container .card .statics .cat h4 {
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.market .container .card a {
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    width: fit-content;
+    padding: 10px 15px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: var(--main-transition);
+}
+
+.market .container .card a::after {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 2px;
+    background: var(--main-color-alt);
+    left: 10%;
+    bottom: 2px;
+}
+
+.market .container .card a:hover {
+    background-color: var(--main-color-alt);
+    color: var(--main-color);
+}
+
+/* creation */
+.create {
+    position: relative;
+    padding: var(--section-padding) 0px;
+    background-color: #9653f1;
+}
+
+.create .container {
+    color: white;
+    text-transform: capitalize;
+}
+
+.create .container .cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--section-padding) 0px;
+}
+
+.create .container .cart p {
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+}
+
+.create .container .cart p::before {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 2px;
+    background-color: var(--main-color-alt);
+    top: -100%;
+    left: 0;
+}
+
+.create .container .cart a {
+    position: relative;
+    padding: 15px 30px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: var(--main-transition);
+}
+
+.create .container .cart a::after {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 2px;
+    background: var(--main-color-alt);
+    left: 10%;
+    bottom: 2px;
+}
+
+.create .container .cart a:hover {
+    background-color: var(--main-color-alt);
+    color: var(--main-color);
+}
+
+.create .container .way {
+    display: flex;
+}
+
+.create .container .way .box div {
+    background-color: var(--main-color-alt);
+    padding: 20px;
+    width: fit-content;
+    border-radius: 50%;
+}
+
+.create .container .way .box h3 {
+    font-size: 24px;
+    margin: 20px 0px;
+}
+
+.create .container .way .box p {
+    line-height: 2;
+    margin-right: 30px;
+}
+
+.create .container .way .box p a {
+    color: #3CF;
+}
+
+/* gallary */
+.gallary {
+    color: white;
+    text-transform: capitalize;
+    padding: var(--section-padding) 0px;
+}
+
+.gallary .container .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallary .container .head h2 {
+    font-size: 24px;
+}
+
+.gallary .container .head h2 span {
+    color: var(--main-color);
+}
+
+.gallary .container .head ul {
+    display: flex;
+}
+
+.gallary .container .head ul li {
+    cursor: pointer;
+    width: fit-content;
+    margin: auto 5px;
+    padding: 10px 15px;
+    border-radius: 40px;
+}
+
+.gallary .container .head ul li:hover {
+    background-color: var(--main-color);
+}
+
+.gallary .container .head ul .active {
+    background-color: var(--main-color);
+}
+
+.gallary .container .galldetile {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    padding: var(--section-padding) 0px;
+    gap: 40px;
+}
+
+.gallary .container .galldetile .card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--bg-color);
+    padding: 30px 20px;
+    border: solid 1px var(--border);
+    border-radius: 30px;
+}
+
+.gallary .container .galldetile .card img {
+    max-width: 100%;
+    border-radius: 30px;
+}
+
+.gallary .container .galldetile .card .rightside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 20px;
+}
+
+.gallary .container .galldetile .card .auther h3 {
+    padding: 20px 10px;
+    font-size: 24px;
+    line-height: 1.9;
+}
+
+.gallary .container .galldetile .card .auther div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.gallary .container .galldetile .card .auther div img {
+    border-radius: 50%;
+    width: 60px;
+}
+
+.gallary .container .galldetile .card .auther div div {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallary .container .galldetile .card .auther div div a {
+    padding: 20px 0px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.gallary .container .galldetile .card .bid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallary .container .galldetile .card .bid div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.gallary .container .galldetile .card .bid div[class="end"] {
+    text-align: end;
+}
+
+/* footer */
+.footer {
+    color: var(--main-color-alt);
+    text-align: center;
+    padding: var(--section-padding) 20px;
+    text-transform: capitalize;
+    background-image: linear-gradient(90deg, #7d5afe, #9d54f4);
+}
+
+.footer a {
+    color: var(--main-color-alt);
+    font-weight: bold;
+}
+
+.footer span {
+    font-weight: bolder;
+}

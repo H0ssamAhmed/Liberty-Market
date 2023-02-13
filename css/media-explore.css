@@ -1,0 +1,111 @@
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+
+    .header .container .toggle {
+        display: none;
+    }
+
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* --------------------- */
+@media (max-width:767px) {
+    .featur .container .img:hover .text {
+        right: 0px;
+    }
+
+    .sellers .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+}
+
+@media(max-width:991px) {
+    .header {
+        max-width: 100%;
+        border-radius: 0%;
+        margin: 0;
+    }
+
+    .header .container ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        left: 0%;
+        top: 120%;
+        background-color: var(--main-color-alt);
+        width: 100%;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .header .container ul li:not(:last-child) {
+        border-bottom: solid gray 1px;
+    }
+
+    .header .container ul li:nth-child(2) a {
+        color: var(--main-color);
+    }
+
+    .header .container ul li:nth-child(2) {
+        background-color: var(--main-color-alt);
+
+    }
+
+    .header .container ul li {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .header .container .links:hover ul {
+
+        z-index: 1;
+    }
+
+    .landing {
+        height: 100vh;
+    }
+
+    .search .container .head {
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    .search .container .head ul {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .search .container .head h1 {
+        font-size: 1.8em;
+        margin: 3pc 0px;
+    }
+
+    .search .container .head ul li input,
+    .search .container .head ul li select,
+    .search .container .head ul li button {
+        width: 100%;
+    }
+
+}
+
+@media(max-width:1199px) {
+    /* .search .container .head h1::before {
+        left: 35%;
+    } */
+}
